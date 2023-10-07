@@ -40,7 +40,7 @@ export default function Page() {
         <p>your github : {github}</p>
 
 
-
+Prove that you contributed to a github repository: 
         <Container as="main">
           <Card title="Name/Address Input">
             <Input
@@ -61,11 +61,8 @@ export default function Page() {
               {
                 isLoading ?
                   "loading" :
-                  isError ?
-                    "error" :
-                    contributors?.some((contributor) => contributor === github) ?
-                      "you contributed to this github : generate a proof" :
-                      "you did not contribute to this github"
+                    // contributors?.some((contributor) => contributor === github) ?
+                      "generate & copy a proof" 
               }
 
             </Button>

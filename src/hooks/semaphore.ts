@@ -25,9 +25,20 @@ async function computeProof(identity: Identity, group:Group) {
 }
 
 export async function createProofs(groupstring:string[], identitystring:string) {
-  console.log("ok")
   const group = await generateGroup(groupstring);
   const identity = new Identity(identitystring);
   const proof = await computeProof(identity, group);
+   // Copying proof to clipboard
+   if (navigator && navigator.clipboard) {
+    try {
+      await navigator.clipboard.writeText(proof.proof.toString());
+      console.log('Proof copied to clipboard.');
+    } catch (err) {
+      console.error('Failed to copy proof to clipboard:', err);
+    }
+  } else {
+    console.error('Clipboard API not supported.');
+  }
+
   return proof;
 }
