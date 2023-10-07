@@ -3,6 +3,7 @@ import { NextSeo } from 'next-seo'
 import styled, { css } from 'styled-components'
 
 import { Container, Layout } from '@/components/templates'
+import { ConnectButton } from '@/components/ConnectButton'
 
 export default function Home() {
   return (
@@ -27,17 +28,17 @@ export default function Home() {
                 Every address input should also accept ENS names.
               </Typography>
 
-              <Button as="a" href="/input">
+              <Button as="a" href="/profilePage">
                 View
               </Button>
             </Card>
 
-            <Card title="ENS Profile">
+            <Card title="Page Menu">
               <Typography color="textSecondary">
                 Show the primary and avatar for an ENS name.
               </Typography>
 
-              <Button as="a" href="/profile">
+              <Button as="a" href="/menu">
                 View
               </Button>
             </Card>

@@ -1,5 +1,6 @@
 import '@rainbow-me/rainbowkit/styles.css'
-import { RainbowKitProvider } from '@rainbow-me/rainbowkit'
+import {  RainbowKitProvider } from '@rainbow-me/rainbowkit'
+import { ConnectButton } from '@/components/ConnectButton'
 import { ThemeProvider } from 'styled-components'
 import { ThorinGlobalStyles, lightTheme } from '@ensdomains/thorin'
 import { WagmiConfig } from 'wagmi'
@@ -19,6 +20,7 @@ export default function App({ Component, pageProps }: AppProps) {
       <ThemeProvider theme={lightTheme}>
         <ThorinGlobalStyles />
         <RainbowKitProvider chains={chains}>
+          <ConnectButton />
           <DefaultSeo {...SEO} />
           {isMounted && <Component {...pageProps} />}
         </RainbowKitProvider>

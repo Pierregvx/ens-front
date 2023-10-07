@@ -1,6 +1,6 @@
 import { Button, Profile, mq } from '@ensdomains/thorin'
 import { ConnectButton as ConnectButtonBase } from '@rainbow-me/rainbowkit'
-import { useDisconnect } from 'wagmi'
+import { useAccount, useDisconnect, useEnsName } from 'wagmi'
 import styled, { css } from 'styled-components'
 
 const StyledButton = styled(Button)`
@@ -15,6 +15,14 @@ const StyledButton = styled(Button)`
 
 export function ConnectButton() {
   const { disconnect } = useDisconnect()
+  const { address } = useAccount();
+  const { data } = useEnsName(
+    {
+      chainId: 5,
+      address
+    }
+  )
+
 
   return (
     <ConnectButtonBase.Custom>
@@ -64,7 +72,7 @@ export function ConnectButton() {
               return (
                 <Profile
                   address={account.address}
-                  ensName={account.ensName || undefined}
+                  ensName={data||undefined}
                   avatar={account.ensAvatar || undefined}
                   onClick={openAccountModal}
                   dropdownItems={[
