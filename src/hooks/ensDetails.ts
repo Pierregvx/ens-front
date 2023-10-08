@@ -6,9 +6,9 @@ import { useAccount, useQuery } from 'wagmi';
 
 
 
-export function useGraphQLQuery<T>(query: string, variables?: object) {
+export function useGraphQLQuery<T>(query: string, variables: object,organisation:string,name:string) {
 
-    const url = 'https://api.thegraph.com/subgraphs/name/ensdomains/ensgoerli'; // Replace with your GraphQL endpoint
+    const url = `https://api.thegraph.com/subgraphs/name/${organisation}/${name}`; // Replace with your GraphQL endpoint
 
     return useQuery<T, undefined>([query], {
         queryFn: async () => {
@@ -79,7 +79,7 @@ interface DomainData {
 
 
 // Example usage:
-function yourQuery() {
+function ensQuery() {
     const { address } = useAccount();
     const queryString = `
         query {
@@ -112,4 +112,4 @@ function yourQuery() {
 
 }
 export type {DomainData}
-export default yourQuery;
+export default ensQuery;

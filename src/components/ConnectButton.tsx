@@ -3,6 +3,8 @@ import { ConnectButton as ConnectButtonBase } from '@rainbow-me/rainbowkit'
 import { useAccount, useDisconnect, useEnsName } from 'wagmi'
 import styled, { css } from 'styled-components'
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+
 const StyledButton = styled(Button)`
   ${({ theme }) => css`
     width: fit-content;
