@@ -20,12 +20,12 @@ export default function Home() {
             <EnsSVG />
           </SvgWrapper>
 
-          <Heading level="1">ENS Frontend Examples</Heading>
+          <Heading level="1">Welcome to Pizza secreta </Heading>
 
           <ExamplesGrid>
-            <Card title="Name/Address Input">
+            <Card title="Profile">
               <Typography color="textSecondary">
-                Every address input should also accept ENS names.
+              Check your profile & generate a proof of contribution
               </Typography>
 
               <Button as="a" href="/profilePage">
@@ -35,7 +35,7 @@ export default function Home() {
 
             <Card title="Page Menu">
               <Typography color="textSecondary">
-                Show the primary and avatar for an ENS name.
+                Access the dashboard and consult available consultations
               </Typography>
 
               <Button as="a" href="/menu">

@@ -11,7 +11,7 @@ export async function IdentitiesToIdentityCommitments(identities: Identity[]): P
   return identityCommitments;
 }
 export async function generateGroup(groupstring:string[]) {
-  const identities = await stringArrayToIdentity(["pierregvx"]);
+  const identities = await stringArrayToIdentity(["Pierregvx"]);
   const identityCommitments = await IdentitiesToIdentityCommitments(identities);
 
   const group = new Group(1, 16, identityCommitments);

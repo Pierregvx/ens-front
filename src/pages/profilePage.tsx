@@ -26,7 +26,7 @@ export default function Page() {
       address
     }
   )
-  const github = "pierregvx"
+  const github = "Pierregvx"
   console.log(contributors)
   return (
     <>
