@@ -1,3 +1,9 @@
+# video of the project
+
+https://www.youtube.com/watch?v=Yfv9ptHgc5c
+
+
+
 This is a Next.js template designed to get you up and running with a new web3 project as quickly as possible.
 
 ## Getting Started
